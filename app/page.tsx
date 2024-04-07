@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { unstable_noStore as noStore } from 'next/cache'
 
 const getData = async () => {
+    noStore()
     const headers = {
         'Authorization': process.env.DB_API_AUTHORIZATION_KEY ?? ''
     }
