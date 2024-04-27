@@ -1,0 +1,3 @@
+
+
+- Create overview page with small strategy components and create a separate detail view

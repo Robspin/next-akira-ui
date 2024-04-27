@@ -20,25 +20,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <body className={`${inter.className} bg-black text-stone-300 dark`} style={backgroundStyle}>
-    <nav className="flex justify-center items-center">
-      <div className="my-10">
-        <Image src="/akira-bg.png" alt="akira header" width={220} height={220}/>
-      </div>
-    </nav>
-    <main className="p-8 flex flex-col items-center">
-      <div className="xl:min-w-[1024px] max-w-[1024px] px-4">
-        {children}
-      </div>
-    </main>
+      <html lang="en">
+      <body className={`${inter.className} bg-black text-stone-300 dark`} style={backgroundStyle}>
+      <link rel="icon" href="/akira-bg.png" sizes="any"/>
+      <nav className="flex justify-center items-center">
+        <div className="my-10">
+          <Image src="/akira-bg.png" alt="akira header" width={220} height={220}/>
+        </div>
+      </nav>
+      <main className="p-8 flex flex-col items-center">
+        <div className="xl:min-w-[1024px] max-w-[1024px] px-4">
+          {children}
+        </div>
+      </main>
       <footer className="flex justify-center items-center">
         <p className="my-20">
           Created by <a href="https://robinsteeman.com" target="_blank"
                         className="hover:underline text-white">Robspin</a>
         </p>
       </footer>
-    </body>
-    </html>
-);
+      </body>
+      </html>
+  );
 }

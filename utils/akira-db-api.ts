@@ -42,3 +42,21 @@ export const getStrategies = async (): Promise<ApiResponse<Strategy[]>> => {
         }
     }
 }
+
+export const getStrategyByName = async (name: string): Promise<ApiResponse<Strategy | undefined>> => {
+    noStore()
+    const headers = {
+        'Authorization': process.env.DB_API_AUTHORIZATION_KEY ?? ''
+    }
+
+    try {
+        return await (await fetch(`${process.env.DB_API_URL}/strategies/${name}`, { headers })).json()
+    } catch (e) {
+        console.log(e)
+        return {
+            success: false,
+            message: `Something went wrong: ${String(e)}`,
+            data: undefined
+        }
+    }
+}
