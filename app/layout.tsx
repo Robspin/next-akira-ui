@@ -35,7 +35,7 @@ export default function RootLayout({
       </main>
       <footer className="flex justify-center items-center">
         <p className="my-20">
-          Created by <a href="https://robinsteeman.com" target="_blank"
+          Created by <a href="https://github.com/Robspin" target="_blank"
                         className="hover:underline text-white">Robspin</a>
         </p>
       </footer>
